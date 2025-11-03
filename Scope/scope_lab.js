@@ -27,8 +27,28 @@ function show(){
 }
 show();
     
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
 
+{
+    // block scope reassign variables
+    var a; 
+    console.log("var a in block, declared: ", a);
+    a = 1;
+    console.log("var a in block, assigned value: ", a);
+    a = "I'm the reassigned var a1 within block scope!";
+    console.log("var a in block, reassigned: ", a);
 
+    let b;
+    console.log("let b in block, decalred: ", b);
+    b = 2;
+    console.log("let b in block, initialized: ", b);
+    b = 200;
+    console.log("let b in block, reassigned: ", b);
+
+    const c = 3;
+    console.log("const c in block, initialized: ", c);
+    // c = 300;    // type error: assignment to const
+    // console.log("const c in block, changed: ", c); 
+}
